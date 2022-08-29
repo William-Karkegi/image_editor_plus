@@ -92,7 +92,7 @@ class ImageEditor extends StatelessWidget {
 
   /// Set custom theme properties default is dark theme with white text
   static ThemeData theme = ThemeData(
-    backgroundColor: Colors.black,
+    backgroundColor: Colors.transparent,
     appBarTheme: const AppBarTheme(
       backgroundColor: Colors.black87,
       iconTheme: IconThemeData(color: Colors.white),
@@ -571,11 +571,12 @@ class _SingleImageEditorState extends State<SingleImageEditor> {
             ),
           child: SafeArea(
             child: ListView(
+              physics: NeverScrollableScrollPhysics(),
               scrollDirection: Axis.horizontal,
               children: <Widget>[
                 BottomButton(
                   icon: Icons.crop,
-                  text: 'Crop',
+                  text: 'Ajuster',
                   onTap: () async {
                     resetTransformation();
 
@@ -602,7 +603,7 @@ class _SingleImageEditorState extends State<SingleImageEditor> {
                 ),
                 BottomButton(
                   icon: Icons.edit,
-                  text: 'Brush',
+                  text: 'Pinceau',
                   onTap: () async {
                     var drawing = await Navigator.push(
                       context,
@@ -629,7 +630,7 @@ class _SingleImageEditorState extends State<SingleImageEditor> {
                 ),
                 BottomButton(
                   icon: Icons.text_fields,
-                  text: 'Text',
+                  text: 'Texte',
                   onTap: () async {
                     TextLayerData? layer = await Navigator.push(
                       context,
@@ -648,7 +649,7 @@ class _SingleImageEditorState extends State<SingleImageEditor> {
                     setState(() {});
                   },
                 ),
-                BottomButton(
+                /*BottomButton(
                   icon: Icons.flip,
                   text: 'Flip',
                   onTap: () {
@@ -750,7 +751,7 @@ class _SingleImageEditorState extends State<SingleImageEditor> {
                                       ),
                                       TextButton(
                                         child: Text(
-                                          i18n('Reset'),
+                                          i18n('Réinitialiser'),
                                         ),
                                         onPressed: () {
                                           setState(() {
@@ -788,7 +789,7 @@ class _SingleImageEditorState extends State<SingleImageEditor> {
                                       ),
                                       TextButton(
                                         child: Text(
-                                          i18n('Reset'),
+                                          i18n('Réinitialiser'),
                                         ),
                                         onPressed: () {
                                           setS(() {
@@ -825,7 +826,7 @@ class _SingleImageEditorState extends State<SingleImageEditor> {
                                       ),
                                       TextButton(
                                         child: Text(
-                                          i18n('Reset'),
+                                          i18n('Réinitialiser'),
                                         ),
                                         onPressed: () {
                                           setS(() {
@@ -909,7 +910,7 @@ class _SingleImageEditorState extends State<SingleImageEditor> {
 
                     setState(() {});
                   },
-                ),
+                ),*/
               ],
             ),
           ),
@@ -1108,7 +1109,7 @@ class _ImageCropperState extends State<ImageCropper> {
                   child: ListView(
                     scrollDirection: Axis.horizontal,
                     children: <Widget>[
-                      IconButton(
+                      /*IconButton(
                         icon: Icon(
                           Icons.portrait,
                           color: isLandscape ? gray : white,
@@ -1131,13 +1132,13 @@ class _ImageCropperState extends State<ImageCropper> {
                           aspectRatio = aspectRatioOriginal!;
                           setState(() {});
                         },
-                      ),
-                      imageRatioButton(null, 'Freeform'),
-                      imageRatioButton(1, 'Square'),
+                      ),*/
+                      imageRatioButton(null, 'Libre'),
+                      /*imageRatioButton(1, 'Square'),
                       imageRatioButton(4 / 3, '4:3'),
                       imageRatioButton(5 / 4, '5:4'),
                       imageRatioButton(7 / 5, '7:5'),
-                      imageRatioButton(16 / 9, '16:9'),
+                      imageRatioButton(16 / 9, '16:9'),*/
                     ],
                   ),
                 ),

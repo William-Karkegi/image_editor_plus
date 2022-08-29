@@ -90,7 +90,7 @@ class _TextEditorImageState extends State<TextEditorImage> {
                     decoration: const InputDecoration(
                       border: InputBorder.none,
                       contentPadding: EdgeInsets.all(10),
-                      hintText: 'Insert Your Message',
+                      hintText: '',
                       hintStyle: TextStyle(color: Colors.white),
                       alignLabelWithHint: true,
                     ),
@@ -110,7 +110,7 @@ class _TextEditorImageState extends State<TextEditorImage> {
                     children: [
                       //   SizedBox(height: 20.0),
                       Text(
-                        i18n('Slider Color'),
+                        i18n('Couleur du texte'),
                       ),
                       //   SizedBox(height: 10.0),
                       Row(children: [
@@ -130,13 +130,13 @@ class _TextEditorImageState extends State<TextEditorImage> {
                         TextButton(
                           onPressed: () {},
                           child: Text(
-                            i18n('Reset'),
+                            i18n('Réinitialiser'),
                           ),
                         ),
                       ]),
                       //   SizedBox(height: 20.0),
                       Text(
-                        i18n('Slider White Black Color'),
+                        i18n('Couleur du texte blanc/noir'),
                       ),
                       //   SizedBox(height: 10.0),
                       Row(children: [
@@ -156,41 +156,38 @@ class _TextEditorImageState extends State<TextEditorImage> {
                         TextButton(
                           onPressed: () {},
                           child: Text(
-                            i18n('Reset'),
+                            i18n('Réinitialiser'),
                           ),
                         )
                       ]),
-                      Container(
-                        color: Colors.black,
-                        child: Column(
-                          children: [
-                            const SizedBox(height: 10.0),
-                            Center(
-                              child: Text(
-                                i18n('Size Adjust').toUpperCase(),
-                                style: const TextStyle(color: Colors.white),
-                              ),
+                      Column(
+                        children: [
+                          const SizedBox(height: 10.0),
+                          Center(
+                            child: Text(
+                              i18n('Ajuster la taille'),
+                              style: const TextStyle(color: Colors.white),
                             ),
-                            const SizedBox(height: 10.0),
-                            Slider(
-                                activeColor: Colors.white,
-                                inactiveColor: Colors.grey,
-                                value: slider,
-                                min: 0.0,
-                                max: 100.0,
-                                onChangeEnd: (v) {
-                                  setState(() {
-                                    slider = v;
-                                  });
-                                },
-                                onChanged: (v) {
-                                  setState(() {
-                                    slider = v;
-                                  });
-                                }),
-                          ],
-                        ),
-                      )
+                          ),
+                          const SizedBox(height: 10.0),
+                          Slider(
+                              activeColor: Colors.white,
+                              inactiveColor: Colors.grey,
+                              value: slider,
+                              min: 0.0,
+                              max: 100.0,
+                              onChangeEnd: (v) {
+                                setState(() {
+                                  slider = v;
+                                });
+                              },
+                              onChanged: (v) {
+                                setState(() {
+                                  slider = v;
+                                });
+                              }),
+                        ],
+                      ),
                     ],
                   ),
                 ),

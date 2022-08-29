@@ -103,7 +103,7 @@ class _TextLayerOverlayState extends State<TextLayerOverlay> {
                       widget.onUpdate();
                     });
                   },
-                  child: Text(i18n('Reset'),
+                  child: Text(i18n('Réinitialiser'),
                       style: const TextStyle(color: Colors.white)),
                 ),
                 const SizedBox(width: 16),
@@ -137,7 +137,7 @@ class _TextLayerOverlayState extends State<TextLayerOverlay> {
                     });
                   },
                   child: Text(
-                    i18n('Reset'),
+                    i18n('Réinitialiser'),
                     style: const TextStyle(color: Colors.white),
                   ),
                 ),
@@ -173,7 +173,7 @@ class _TextLayerOverlayState extends State<TextLayerOverlay> {
                     });
                   },
                   child: Text(
-                    i18n('Reset'),
+                    i18n('Réinitialiser'),
                     style: const TextStyle(color: Colors.white),
                   ),
                 ),

@@ -49,7 +49,7 @@ class _ColorPickersSliderState extends State<ColorPickersSlider> {
               ),
               TextButton(
                 onPressed: () {},
-                child: Text(i18n('Reset'),
+                child: Text(i18n('Réinitialiser'),
                     style: const TextStyle(color: Colors.white)),
               )
             ],
@@ -69,7 +69,7 @@ class _ColorPickersSliderState extends State<ColorPickersSlider> {
             ),
             TextButton(
               onPressed: () {},
-              child: Text(i18n('Reset'),
+              child: Text(i18n('Réinitialiser'),
                   style: const TextStyle(color: Colors.white)),
             )
           ]),
