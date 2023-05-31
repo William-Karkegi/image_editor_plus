@@ -1466,6 +1466,7 @@ class _ImageEditorDrawingState extends State<ImageEditorDrawing> {
     Colors.purple,
     Colors.brown,
     Colors.indigo,
+    Colors.indigo,
   ];
 
   void changeColor(Color color) {
